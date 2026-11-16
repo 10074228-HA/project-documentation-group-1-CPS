@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the schema for BumpMap
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap2dSchema"
+        file="../Common/TextureMap2dSchema.xml" />
+
+  <UID  val="BumpMapSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="5"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Bump Texture" />
+  <!--Texture-->
+  <TextureURI id="bumpmap_Bitmap"
+       val=""
+       label="Source"/>
+	   
+  <String id="bumpmap_Bitmap_urn"
+       val=""
+       label="URN"/>
+	   
+  <Distance id="bumpmap_Depth"
+			val="1"
+			unit="in"
+			label="Amount"/>
+
+  <Float id="bumpmap_NormalScale"
+			val="1"
+			label="Amount"/>
+
+  <Choice 	id="bumpmap_Type" 
+			val="bumpmap_height_map"
+			label="Bump Type" >
+		<ChoiceValue id="bumpmap_height_map"
+			 val="0"
+			 label="Height Map" />
+		<ChoiceValue id="bumpmap_normal_map"
+			 val="1"
+			 label="Normal Map" />
+  </Choice>
+
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/BumpMap/BumpMapUI.xml"/>
+
+  <!--Override the default value of the base 2d texture--> 
+  <Distance id="texture_RealWorldScaleX"
+         public="true"
+         val="1."
+         unit="in"
+         label="Size X" >
+    <Bounds minimum="0.01" />
+  </Distance>
+
+  <Distance id="texture_RealWorldScaleY"
+         public="true"
+         val="1."
+         unit="in"
+         label="Size Y" >
+    <Bounds minimum="0.01" />
+  </Distance>
+
+
+  <PropertyAlias alias="bumpmap_VScale"
+                 id="texture_VScale" />
+  <PropertyAlias alias="bumpmap_UScale"
+                 id="texture_UScale" />
+  <PropertyAlias alias="bumpmap_ScaleLock"
+                 id="texture_ScaleLock" />
+  <PropertyAlias alias="bumpmap_WAngle"
+                 id="texture_WAngle" />
+  <PropertyAlias alias="bumpmap_UOffset"
+                 id="texture_UOffset" />
+  <PropertyAlias alias="bumpmap_VOffset"
+                 id="texture_VOffset" />
+  <PropertyAlias alias="bumpmap_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="bumpmap_RealWorldScaleX"
+                 id="texture_RealWorldScaleX" />
+  <PropertyAlias alias="bumpmap_RealWorldScaleY"
+                 id="texture_RealWorldScaleY" />
+  <PropertyAlias alias="bumpmap_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="bumpmap_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="bumpmap_MapChannel"
+                 id="texture_MapChannel" />
+  <PropertyAlias alias="bumpmap_MapChannel_ID_Advanced"
+                 id="texture_MapChannel_ID_Advanced" />
+  <PropertyAlias alias="bumpmap_MapChannel_UVWSource_Advanced"
+                 id="texture_MapChannel_UVWSource_Advanced" />
+  <PropertyAlias alias="bumpmap_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="bumpmap_URepeat"
+                 id="texture_URepeat" />
+  <PropertyAlias alias="bumpmap_VRepeat"
+                 id="texture_VRepeat" />
+
+</AssetSchema>
+
