@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "author": "CPS Group 1",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-nano",
+      "id": "nano",
+      "top": 120,
+      "left": -60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr1",
+      "top": 260,
+      "left": 150,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "motor1",
+      "top": -190,
+      "left": 330,
+      "attrs": {
+        "display": "angle",
+        "arrow": "orange"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "motor2",
+      "top": -190,
+      "left": 560,
+      "attrs": {
+        "display": "angle",
+        "arrow": "orange"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "motor3",
+      "top": 140,
+      "left": 560,
+      "attrs": {
+        "display": "angle",
+        "arrow": "orange"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "nano:8",
+      "motor1:A+",
+      "blue",
+      []
+    ],
+    [
+      "nano:9",
+      "motor1:B+",
+      "blue",
+      []
+    ],
+    [
+      "nano:10",
+      "motor1:A-",
+      "blue",
+      []
+    ],
+    [
+      "nano:11",
+      "motor1:B-",
+      "blue",
+      []
+    ],
+    [
+      "nano:4",
+      "motor2:A+",
+      "green",
+      []
+    ],
+    [
+      "nano:5",
+      "motor2:B+",
+      "green",
+      []
+    ],
+    [
+      "nano:6",
+      "motor2:A-",
+      "green",
+      []
+    ],
+    [
+      "nano:7",
+      "motor2:B-",
+      "green",
+      []
+    ],
+    [
+      "nano:2",
+      "sr1:DS",
+      "orange",
+      []
+    ],
+    [
+      "nano:3",
+      "sr1:STCP",
+      "orange",
+      []
+    ],
+    [
+      "nano:12",
+      "sr1:SHCP",
+      "orange",
+      []
+    ],
+    [
+      "sr1:Q0",
+      "motor3:A+",
+      "purple",
+      []
+    ],
+    [
+      "sr1:Q1",
+      "motor3:B+",
+      "purple",
+      []
+    ],
+    [
+      "sr1:Q2",
+      "motor3:A-",
+      "purple",
+      []
+    ],
+    [
+      "sr1:Q3",
+      "motor3:B-",
+      "purple",
+      []
+    ],
+    [
+      "nano:5V",
+      "sr1:VCC",
+      "red",
+      []
+    ],
+    [
+      "nano:5V",
+      "sr1:MR",
+      "red",
+      []
+    ],
+    [
+      "nano:GND.1",
+      "sr1:GND",
+      "black",
+      []
+    ],
+    [
+      "nano:GND.1",
+      "sr1:OE",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
